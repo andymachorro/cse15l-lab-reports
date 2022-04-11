@@ -55,7 +55,7 @@ Then, log into ieng6 with ssh again, and use ls. You should see the file there i
 
 <img width="1440" alt="Screen Shot 2022-04-09 at 6 56 48 PM" src="https://user-images.githubusercontent.com/103210240/162598468-fa584d63-f596-46dc-9b8d-0a41fd343a71.png">
 
-**6. Setting an SSH Key**
+**5. Setting an SSH Key**
 
 The idea behind ssh keys is that a program, called ssh-keygen, creates a pair of files called the public key and private key. You copy the public key to a particular location on the server, and the private key in a particular location on the client. Then, the ssh command can use the pair of files in place of your password. This is a common setup step in lots of work environments that involve code on a server.
 
@@ -68,5 +68,23 @@ Now we need to copy the public (not the private) key to the .ssh directory of yo
 
 <img width="1440" alt="Screen Shot 2022-04-09 at 8 46 31 PM" src="https://user-images.githubusercontent.com/103210240/162600680-4c26d70f-07b6-42c3-b27d-e2d3f38efa96.png">
 
-**7. Optimizing Remote Running**
+**6. Optimizing Remote Running**
+Now that we know this information, we can efficiently copy/edit files onto a remote server, and run it.
+Some hints: 
+- You can write a command in quotes at the end if an ssh.
+- You can use semicolons to run multiple commands on the same line in most terminals. 
+
+For example, try:
+$ cp WhereAmI.java OtherMain.java; javac OtherMain.java;
+java WhereAmI
+
+Try to get the total time for a run after editing and saving to under 10 total keystrokes/mouse clicks, including all typing.
+If you have more time, brainstorm other ideas or search for other ways you might easily run remote code.
+
+![Screen Shot 2022-04-10 at 8 39 16 PM](https://user-images.githubusercontent.com/103210240/162661406-507b3f12-d614-4ab7-81af-9a416ac446b6.png)
+
+
+
+
+
 
