@@ -22,8 +22,10 @@ $ ssh cs15lwi22zz@ieng6.ucsd.edux
 <br>
 (That’s one, five, l (not one); the one and l look very close in some fonts.)
 ---
+
 **3. Trying Some Commands** 
 ---
+
 Try running the commands: ***cp***,
                           ***ls***,
                           ***pwd***,
@@ -64,17 +66,21 @@ You should be prompted for a password just like when you log in with ssh.
 <img width="1440" alt="Screen Shot 2022-04-09 at 6 52 57 PM" src="https://user-images.githubusercontent.com/103210240/162598463-b43c22e9-b569-4765-ab81-71da1e6c78e9.png">
 Then, log into ieng6 with ssh again, and use ls. You should see the file there in your home directory! Now you can run it on the ieng6 computer using javac and java. Since java is installed on the server, everyone should be able to run it no matter the client.
 <img width="1440" alt="Screen Shot 2022-04-09 at 6 56 48 PM" src="https://user-images.githubusercontent.com/103210240/162598468-fa584d63-f596-46dc-9b8d-0a41fd343a71.png">
+
 ---
 **5. Setting an SSH Key**
 ---
+
 The idea behind ssh keys is that a program, called ssh-keygen, creates a pair of files called the public key and private key. You copy the public key to a particular location on the server, and the private key in a particular location on the client. Then, the ssh command can use the pair of files in place of your password. This is a common setup step in lots of work environments that involve code on a server.
 <img width="1440" alt="Screen Shot 2022-04-09 at 8 47 53 PM" src="https://user-images.githubusercontent.com/103210240/162600661-ae227164-de47-47c1-a598-26d25a1afe69.png">
 This created two new files on your system; the private key (in a file id_rsa) and the public key (in a file id_rsa.pub), stored in the .ssh directory on your computer.
 Now we need to copy the public (not the private) key to the .ssh directory of your user account on the server.
 <img width="1440" alt="Screen Shot 2022-04-09 at 8 46 31 PM" src="https://user-images.githubusercontent.com/103210240/162600680-4c26d70f-07b6-42c3-b27d-e2d3f38efa96.png">
+
 ---
 **6. Optimizing Remote Running**
 ---
+
 Now that we know this information, we can efficiently copy/edit files onto a remote server, and run it.
 Some hints: 
 - You can write a command in quotes at the end if an ssh.
