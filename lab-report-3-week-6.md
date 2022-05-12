@@ -52,4 +52,3 @@ scp -r . cs15lsp22aot@ieng6.ucsd.edu:~/markdown-parse
 <img width="1440" alt="Screen Shot 2022-05-10 at 6 41 20 PM" src="https://user-images.githubusercontent.com/103210240/167751804-ac611d51-5f7b-41ad-805b-251222c3946a.png">
 
 - In the image shown above, I ran the tests that were found in the MarkdownParseTest.java, making sure that it would complie and run, and it did run successfully
-
